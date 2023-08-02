@@ -1,0 +1,27 @@
+<div class = "option" id="viewers" align= center>
+    <label for="views-number">Number of people who can see:</label>
+
+    <input type="number" id="views-number" name="views-number" min="1">
+
+    <label for="checkbox-id">Any number of people can see this documnet</label>
+
+    <input type="checkbox" id="checkbox-id" name="checkbox-id">
+
+    <script>
+    // Get the checkbox and input field elements
+    var checkbox = document.getElementById('checkbox-id');
+    var numberInput = document.getElementById('views-number');
+    console.log(checkbox, numberInput)
+
+    // Set the input field to disabled when the checkbox is checked
+    checkbox.onchange = function() {
+        console.log(checkbox.checked);
+        if (!checkbox.checked) {
+            numberInput.disabled = false;
+        } else {
+            numberInput.disabled = true;
+            numberInput.value = "";
+        }
+    };
+</script>
+</div>
